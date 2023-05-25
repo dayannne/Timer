@@ -10,10 +10,12 @@ body {
   font-family: 'Pretendard-Regular';
   max-width: 1280px;
   height: 100vh;
-  margin: 72px auto 103px;
+  margin: 0 auto;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #f0f4ff, #a5b6ee) no-repeat;
+  box-sizing: border-box;
 }
 
 /** header */
@@ -87,7 +89,28 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
+
+.times-box::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  background: #354971;
+  left: 0;
+}
+.times-box::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  background: #354971;
+  right: 0;
+}
+
 /* section-buttons*/
 .times-box p {
   color: #fff;
